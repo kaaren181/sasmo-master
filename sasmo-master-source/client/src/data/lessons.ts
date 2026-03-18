@@ -298,32 +298,7 @@ const modularArithmetic: TopicLesson = {
     },
   ],
 
-  videos: [
-    {
-      title: 'This completely changed the way I see numbers',
-      channel: 'Zach Star',
-      views: '2.1M views',
-      url: 'https://youtube.com/watch?v=lJ3CD9M3nEQ',
-      description:
-        'An engaging exploration of modular arithmetic and how it underlies everyday patterns, cryptography, and competition math.',
-    },
-    {
-      title: 'Modular Arithmetic (Discrete Math)',
-      channel: 'TrevTutor',
-      views: '310K views',
-      url: 'https://youtube.com/watch?v=d-n92Ml1iu0',
-      description:
-        'Clear lecture-style walkthrough of modular arithmetic fundamentals, congruences, and practical examples.',
-    },
-    {
-      title: 'Journey into Cryptography',
-      channel: 'Khan Academy',
-      views: '800K views',
-      url: 'https://youtube.com/watch?v=SL7J8hPKEWY',
-      description:
-        'See how modular arithmetic powers real-world encryption. Great motivation for why this topic matters beyond exams.',
-    },
-  ],
+  videos: [],
 
   sasmoTips: [
     'Last-digit questions appear almost every year. Memorise the 4-step method and the cycle table above.',
@@ -545,24 +520,7 @@ const algebra: TopicLesson = {
     },
   ],
 
-  videos: [
-    {
-      title: "Vieta's Formulas",
-      channel: 'Organic Chemistry Tutor',
-      views: '1.1M views',
-      url: 'https://youtube.com/watch?v=LiMGKHjNHEk',
-      description:
-        "Thorough explanation of Vieta's formulas with multiple worked examples for quadratic and cubic equations.",
-    },
-    {
-      title: "Vieta's Formulas for Competition Math",
-      channel: 'Mathologer',
-      views: '450K views',
-      url: 'https://youtube.com/watch?v=shEk8sz1oOw',
-      description:
-        "Advanced applications of Vieta's formulas commonly seen in math olympiad problems.",
-    },
-  ],
+  videos: [],
 
   sasmoTips: [
     "When you see \"p and q are roots of...\", immediately write down sum = -b/a and product = c/a. Don't even think about the quadratic formula.",
@@ -786,24 +744,7 @@ const numberTheory: TopicLesson = {
     },
   ],
 
-  videos: [
-    {
-      title: 'Number Theory Full Course',
-      channel: 'Organic Chemistry Tutor',
-      views: '1.8M views',
-      url: 'https://youtube.com/watch?v=FHFoMKxmiUA',
-      description:
-        'Comprehensive number theory course covering primes, GCD/LCM, divisibility, and factorials.',
-    },
-    {
-      title: 'Trailing Zeros in Factorials',
-      channel: 'MindYourDecisions',
-      views: '890K views',
-      url: 'https://youtube.com/watch?v=hB59bUIjKkI',
-      description:
-        'Focused explanation of the trailing zeros formula with competition math examples.',
-    },
-  ],
+  videos: [],
 
   sasmoTips: [
     'When you see n! in a SASMO problem, trailing zeros are almost certainly involved. Use the floor(n/5) + floor(n/25) + ... formula.',
@@ -1069,24 +1010,7 @@ const geometry: TopicLesson = {
     },
   ],
 
-  videos: [
-    {
-      title: 'Geometry Full Course',
-      channel: 'Organic Chemistry Tutor',
-      views: '5.2M views',
-      url: 'https://youtube.com/watch?v=pFCiMgo3MrU',
-      description:
-        'Comprehensive geometry course covering triangles, circles, area formulas, and similarity.',
-    },
-    {
-      title: 'Inscribed Circles and Inradius',
-      channel: 'MindYourDecisions',
-      views: '620K views',
-      url: 'https://youtube.com/watch?v=OlsJRKZCiME',
-      description:
-        'Detailed explanation of inradius formulas with competition math examples.',
-    },
-  ],
+  videos: [],
 
   sasmoTips: [
     'If a SASMO problem mentions "similar" figures and asks about area, immediately think k-squared scaling.',
@@ -1326,24 +1250,7 @@ const combinatorics: TopicLesson = {
     },
   ],
 
-  videos: [
-    {
-      title: 'Permutations and Combinations Tutorial',
-      channel: 'Organic Chemistry Tutor',
-      views: '4.5M views',
-      url: 'https://youtube.com/watch?v=XJnIdRXUi7A',
-      description:
-        'Complete tutorial on permutations and combinations with many worked examples.',
-    },
-    {
-      title: 'Counting Paths on a Grid',
-      channel: '3Blue1Brown',
-      views: '1.5M views',
-      url: 'https://youtube.com/watch?v=8idr1WZ1A7Q',
-      description:
-        'Beautiful visual explanation of grid path counting and its connection to combinations.',
-    },
-  ],
+  videos: [],
 
   sasmoTips: [
     'Always ask: "Does order matter?" If yes, use permutations. If no, use combinations.',
@@ -1377,320 +1284,285 @@ const logic: TopicLesson = {
   topic: 'Logic & Reasoning',
   title: 'Logic Puzzles & Reasoning',
   description:
-    'Crack truth/liar puzzles, cryptarithmetic, and custom operators with systematic methods. Appears nearly every year in Q11-Q15.',
+    'Master self-referential logic, truth/liar puzzles, and proof error identification. Appears nearly every year in Q11-Q15.',
   color: 'from-red-500 to-red-600',
   iconEmoji: '\uD83E\uDDE0',
   examFrequency: 'Nearly every year (Q11-Q15)',
   mastery: 0,
 
   sections: [
-    // ---- CONCEPT: Assume and Check ----
+    // ---- CONCEPT: Self-Referential Logic ----
     {
       type: 'concept',
-      title: 'The Assume-and-Check Method',
+      title: 'Self-Referential Logic',
       content: `
 <div>
-  <p>Many logic problems seem impossible at first because there are multiple possibilities. The <strong>assume-and-check</strong> method cuts through the confusion:</p>
+  <p><strong>Self-referential statements</strong> are statements that talk about themselves. They create fascinating logical puzzles because the truth of the statement depends on its own content.</p>
   <br/>
-  <ol>
-    <li><strong>Pick one statement</strong> and assume it's true (or false).</li>
-    <li><strong>Follow the logical consequences.</strong> What else must be true?</li>
-    <li><strong>Check for contradictions.</strong> If you hit one, your assumption was wrong &mdash; flip it.</li>
-    <li><strong>If consistent,</strong> you've found the answer.</li>
-  </ol>
+  <p><strong>Classic example &mdash; The Liar Sentence:</strong></p>
+  <p style="text-align:center;font-size:1.15rem;margin:12px 0;">"This sentence is false."</p>
+  <p>If the sentence is true, then what it says must be correct &mdash; so it's false. But if it's false, then "this sentence is false" is wrong &mdash; meaning it's true. <strong>Paradox!</strong></p>
   <br/>
-  <p><strong>Classic example &mdash; Truth/Liar Puzzle:</strong></p>
-  <p>A says: "I am a liar." B says: "A is telling the truth."</p>
-  <br/>
-  <p><strong>Assume A is a truth-teller:</strong></p>
+  <p><strong>In SASMO, self-referential puzzles are solvable.</strong> They use statements like:</p>
   <ul>
-    <li>Then A's statement "I am a liar" is true &rarr; A is a liar. <strong>Contradiction!</strong></li>
+    <li>"Exactly 2 of these 5 statements are true."</li>
+    <li>"Statement 3 is false."</li>
+    <li>"The number of false statements here is greater than the number of true ones."</li>
   </ul>
-  <p><strong>So A must be a liar:</strong></p>
-  <ul>
-    <li>A's statement "I am a liar" is false &rarr; A is NOT a liar... <strong>Wait, another contradiction!</strong></li>
-  </ul>
-  <p>This is the famous <strong>liar's paradox</strong>. In SASMO, problems are designed to have a solution, so look for the consistent assignment by checking <em>all</em> people's statements together.</p>
-  <br/>
-  <p style="background:rgba(239,68,68,0.15);padding:12px;border-radius:8px;">
-    <strong>Pro tip:</strong> Start with the person who makes the strongest or most restrictive claim. That usually eliminates the most possibilities.
-  </p>
-</div>`,
-    },
-
-    // ---- CONCEPT: Cryptarithmetic ----
-    {
-      type: 'concept',
-      title: 'Cryptarithmetic &mdash; Golden Rules',
-      content: `
-<div>
-  <p>In <strong>cryptarithmetic</strong>, each letter represents a unique digit (0&ndash;9). Your job is to figure out which digit each letter stands for.</p>
-  <br/>
-  <p><strong>Golden Rules:</strong></p>
-  <ol>
-    <li><strong>Leading digits cannot be 0.</strong> If a number starts with a letter, that letter is not equal to 0.</li>
-    <li><strong>Each letter maps to exactly one digit, and each digit to at most one letter.</strong></li>
-    <li><strong>Work column by column, right to left,</strong> just like normal addition. Track carries!</li>
-    <li><strong>Use constraints to narrow down.</strong> If a column gives you info like "A + B ends in C", use that.</li>
-  </ol>
-  <br/>
-  <p><strong>Systematic approach:</strong></p>
-  <ul>
-    <li>Start with the <strong>leftmost column</strong> &mdash; it often has limited possibilities (usually a carry of 0 or 1).</li>
-    <li>Work column by column, carrying over as needed.</li>
-    <li>Test small cases and eliminate impossibilities.</li>
-  </ul>
-  <br/>
-  <p><strong>The AB + BA = CBC pattern:</strong></p>
-  <p>AB + BA means (10A + B) + (10B + A) = 11(A + B).</p>
-  <p>So the sum must be a multiple of 11! If CBC = 100C + 10B + C = 101C + 10B, then 11(A + B) = 101C + 10B.</p>
-</div>`,
-    },
-
-    // ---- CONCEPT: Custom Operators ----
-    {
-      type: 'concept',
-      title: 'Custom Operators',
-      content: `
-<div>
-  <p>SASMO sometimes invents a new operation (like using a star or a hash symbol) and gives you examples. Your job: <strong>reverse-engineer the pattern</strong>.</p>
   <br/>
   <p><strong>Strategy:</strong></p>
   <ol>
-    <li>Write out all given examples in a table.</li>
-    <li>For each example, try common operations: a + b, a &minus; b, a &times; b, ab (concatenation), 2a + b, etc.</li>
-    <li>Look for a formula that works for ALL examples.</li>
-    <li>Apply the formula to the question.</li>
+    <li><strong>Assume</strong> a specific number of statements are true (e.g., exactly 1, exactly 2, etc.).</li>
+    <li><strong>Check each statement</strong> under that assumption &mdash; does the count stay consistent?</li>
+    <li><strong>If the assumption creates a contradiction</strong>, try the next number.</li>
+    <li>The correct answer is the assumption that is <strong>self-consistent</strong>.</li>
   </ol>
   <br/>
-  <p><strong>Example:</strong> Define 4 # 8 = 2412 and 5 # 9 = 2812.</p>
-  <br/>
-  <p>Let's investigate:</p>
-  <ul>
-    <li>4 # 8: What gives 2412?</li>
-    <li>First two digits: 24 = 2 &times; (4 + 8) = 2 &times; 12. &#10003;</li>
-    <li>Last two digits: 12 = 3 &times; (8 &minus; 4) = 3 &times; 4. &#10003;</li>
-    <li>Check: 5 # 9: First two digits: 2 &times; (5 + 9) = 28 &#10003;. Last two digits: 3 &times; (9 &minus; 5) = 12 &#10003;.</li>
-  </ul>
-  <br/>
-  <p><strong>Pattern:</strong> a # b = concatenate(2(a+b), 3(b&minus;a))</p>
-  <br/>
   <p style="background:rgba(239,68,68,0.15);padding:12px;border-radius:8px;">
-    <strong>Common patterns in SASMO custom operators:</strong> sum, difference, product, concatenation of two sub-expressions, or digit-sum operations.
+    <strong>Pro tip:</strong> For "how many of these N statements are true?" puzzles, try every possibility from 0 to N. Usually only one is consistent.
   </p>
 </div>`,
     },
 
-    // ---- CONCEPT: Types of Logic Puzzles ----
+    // ---- CONCEPT: Truth and Liar Puzzles ----
     {
       type: 'concept',
+      title: 'Truth and Liar Puzzles',
+      content: `
+<div>
+  <p>In these puzzles, some people <strong>always tell the truth</strong> (truth-tellers) and others <strong>always lie</strong> (liars). Your mission: figure out who is what.</p>
+  <br/>
+  <p><strong>The Assume-and-Check Method:</strong></p>
+  <ol>
+    <li><strong>Pick one person</strong> and assume they are a truth-teller.</li>
+    <li><strong>Follow the chain of consequences.</strong> If A is truthful and says "B is a liar", then B must be a liar.</li>
+    <li><strong>Check every statement for consistency.</strong> Do all statements agree with your assignment?</li>
+    <li><strong>If you hit a contradiction</strong>, your assumption was wrong &mdash; flip it and try again.</li>
+  </ol>
+  <br/>
+  <p><strong>Key insight:</strong> A liar saying "B is a liar" means B is actually a <em>truth-teller</em> (because liars always say the opposite).</p>
+  <br/>
+  <p><strong>Types of truth/liar puzzles in SASMO:</strong></p>
+  <ul>
+    <li><strong>Fixed count:</strong> "Exactly one of these three people is a liar." &mdash; you know the total.</li>
+    <li><strong>Unknown count:</strong> You must determine both who is what and how many liars there are.</li>
+    <li><strong>Knight/Knave variant:</strong> People on an island always tell truth or always lie. You ask questions to figure out a path or identity.</li>
+  </ul>
+  <br/>
+  <p style="background:rgba(239,68,68,0.15);padding:12px;border-radius:8px;">
+    <strong>Pro tip:</strong> Start with the person who makes the <strong>most restrictive claim</strong>. That assumption eliminates the most possibilities and saves you time.
+  </p>
+</div>`,
+    },
+
+    // ---- CONCEPT: Proof Error Identification ----
+    {
+      type: 'concept',
+      title: 'Proof Error Identification',
+      content: `
+<div>
+  <p>SASMO sometimes shows you a "proof" that leads to an absurd conclusion (like 1 = 2) and asks: <strong>"Where is the error?"</strong></p>
+  <br/>
+  <p><strong>Common hidden errors in fake proofs:</strong></p>
+  <br/>
+  <p><strong>1. Division by zero</strong></p>
+  <p>The proof sets up a = b, then later divides both sides by (a &minus; b), which is 0. This is the #1 trick.</p>
+  <br/>
+  <p><strong>2. Invalid square root</strong></p>
+  <p>Taking the square root of both sides and dropping the &plusmn;. For example, if x&sup2; = 4, then x = &plusmn;2, not just x = 2.</p>
+  <br/>
+  <p><strong>3. Incorrect cancellation</strong></p>
+  <p>Cancelling terms that aren't actually common factors, or cancelling when a factor could be negative (which would flip the inequality).</p>
+  <br/>
+  <p><strong>4. Hidden assumption that doesn't hold</strong></p>
+  <p>The proof assumes something is positive when it could be negative, or assumes a certain ordering that isn't guaranteed.</p>
+  <br/>
+  <p><strong>Strategy for SASMO:</strong></p>
+  <ol>
+    <li>Read the proof line by line.</li>
+    <li>At each step, ask: "Is this operation <strong>always valid</strong>?"</li>
+    <li>Pay special attention to <strong>division</strong> (could the divisor be 0?), <strong>square roots</strong> (did they drop a case?), and <strong>cancellations</strong>.</li>
+    <li>The error is usually in the step that makes the jump from reasonable to absurd.</li>
+  </ol>
+  <br/>
+  <p style="background:rgba(239,68,68,0.15);padding:12px;border-radius:8px;">
+    <strong>Pro tip:</strong> If the proof concludes something obviously wrong (like 1 = 2 or 0 = 1), work backwards from the absurd conclusion. The suspicious step is usually 1-2 lines before it.
+  </p>
+</div>`,
+    },
+
+    // ---- RULE: Systematic Elimination ----
+    {
+      type: 'rule',
+      title: 'Systematic Elimination Method',
+      content: `
+<div>
+  <p>When a logic problem gives you multiple clues and asks you to determine a unique arrangement, use <strong>systematic elimination</strong>:</p>
+  <br/>
+  <ol>
+    <li><strong>List all possibilities</strong> in a grid or table.</li>
+    <li><strong>Apply each clue</strong> to eliminate impossible combinations.</li>
+    <li><strong>Look for forced conclusions</strong> &mdash; if only one option remains in a row/column, it must be the answer.</li>
+    <li><strong>Chain deductions</strong> &mdash; each elimination may force new eliminations.</li>
+  </ol>
+  <br/>
+  <p><strong>Example:</strong> Three students (A, B, C) each scored differently on a test (70, 80, 90).</p>
+  <ul>
+    <li>Clue 1: A did not score 90.</li>
+    <li>Clue 2: B scored higher than A.</li>
+    <li>Clue 3: C did not score 70.</li>
+  </ul>
+  <br/>
+  <p><strong>Elimination:</strong></p>
+  <ul>
+    <li>From Clue 1: A is 70 or 80.</li>
+    <li>From Clue 3: C is 80 or 90.</li>
+    <li>From Clue 2: B > A. If A = 80, then B = 90, but then C has only 70 left &mdash; contradicts Clue 3.</li>
+    <li>So A = 70. Then B > 70, so B = 80 or 90. C = 80 or 90.</li>
+    <li>If B = 80, C = 90. If B = 90, C = 80. Both satisfy Clue 2 and 3.</li>
+    <li>We need more clues to distinguish &mdash; but in SASMO, there are always enough clues for a unique answer.</li>
+  </ul>
+  <br/>
+  <p style="background:rgba(239,68,68,0.15);padding:12px;border-radius:8px;">
+    <strong>Key:</strong> Always check your final answer against ALL clues. A common mistake is satisfying most clues but missing one.
+  </p>
+</div>`,
+    },
+
+    // ---- TIP: Logic Problem Types in SASMO ----
+    {
+      type: 'tip',
       title: 'Types of Logic Puzzles in SASMO',
       content: `
 <div>
-  <p>SASMO logic problems generally fall into these categories:</p>
+  <p>SASMO logic problems fall into three core categories:</p>
   <br/>
-  <p><strong>1. Truth/Liar Puzzles</strong></p>
-  <p>Some people always tell the truth, others always lie. Use assume-and-check to find who is what.</p>
+  <p><strong>1. Self-Referential Logic</strong></p>
+  <p>Statements that refer to themselves or to the set of all statements. Find the self-consistent truth assignment.</p>
   <br/>
-  <p><strong>2. Cryptarithmetic</strong></p>
-  <p>Letters stand for digits. Use column-by-column analysis and constraints to decode.</p>
+  <p><strong>2. Truth/Liar Puzzles</strong></p>
+  <p>Determine who tells the truth and who lies by checking every assumption for contradictions.</p>
   <br/>
-  <p><strong>3. Custom Operators</strong></p>
-  <p>A new operation is defined by examples. Find the pattern and apply it.</p>
-  <br/>
-  <p><strong>4. Constraint Satisfaction</strong></p>
-  <p>Given several clues, determine a unique arrangement (like "who sits where" or "who owns which pet").</p>
-  <br/>
-  <p><strong>5. Process of Elimination</strong></p>
-  <p>Systematically rule out impossible cases until only one answer remains.</p>
+  <p><strong>3. Proof Error Identification</strong></p>
+  <p>A "proof" reaches an impossible conclusion. Your job: pinpoint the invalid step (usually division by zero or dropping a &plusmn;).</p>
   <br/>
   <p style="background:rgba(239,68,68,0.15);padding:12px;border-radius:8px;">
     <strong>Strategy for all types:</strong> Be organized. Write down your assumptions. Track what you've tested. A systematic approach beats random guessing every time.
   </p>
 </div>`,
     },
-
-    // ---- RULE: Cryptarithmetic Column Method ----
-    {
-      type: 'rule',
-      title: 'Cryptarithmetic &mdash; Column-by-Column Method',
-      content: `
-<div>
-  <p>For addition-type cryptarithmetic, work through each column from <strong>right to left</strong>:</p>
-  <br/>
-  <ol>
-    <li><strong>Rightmost column:</strong> No carry in. Find which digits work.</li>
-    <li><strong>Record the carry</strong> (0 or 1) into the next column.</li>
-    <li><strong>Next column:</strong> Add the digits plus the carry. Check consistency.</li>
-    <li><strong>Repeat</strong> until all columns are done.</li>
-    <li><strong>Verify</strong> all constraints: no repeated digits, no leading zeros.</li>
-  </ol>
-  <br/>
-  <p><strong>Example: SEND + MORE = MONEY</strong></p>
-  <p>This is the most famous cryptarithmetic. Starting from the right column (D + E = Y + 10 &times; carry), working left, checking each possibility, you eventually get:</p>
-  <p style="text-align:center;margin:8px 0;font-family:monospace;font-size:1.1rem;">
-    9567 + 1085 = 10652
-  </p>
-  <p>S=9, E=5, N=6, D=7, M=1, O=0, R=8, Y=2</p>
-</div>`,
-    },
   ],
 
   workedExamples: [
     {
-      title: 'Cryptarithmetic: AB + BA = CBC',
+      title: 'Self-Referential Statements',
       problem:
-        'In the addition AB + BA = CBC, where each letter represents a different digit, find A + B + C.',
+        'Five statements are written on a board. Statement 1: "Exactly one of these five statements is true." Statement 2: "Exactly two of these five statements are true." Statement 3: "Exactly three of these five statements are true." Statement 4: "Exactly four of these five statements are true." Statement 5: "Exactly five of these five statements are true." How many of these statements are true?',
       solution: `
 <div>
-  <p><strong>Step 1 &mdash; Express algebraically:</strong></p>
-  <p>AB = 10A + B, &nbsp; BA = 10B + A</p>
-  <p>AB + BA = 11(A + B) = 11A + 11B</p>
+  <p><strong>Step 1 &mdash; Key observation:</strong></p>
+  <p>At most one of the five statements can be true, because they contradict each other (if Statement 2 is true, then exactly 2 are true, but then Statement 2 is one of the 2).</p>
   <br/>
-  <p><strong>Step 2 &mdash; Analyse CBC:</strong></p>
-  <p>CBC = 100C + 10B + C = 101C + 10B</p>
-  <p>So: 11(A + B) = 101C + 10B</p>
+  <p><strong>Step 2 &mdash; Test each possibility:</strong></p>
+  <p>If exactly 1 statement is true, then Statement 1 is true. Check: Statement 1 says "exactly one is true" &mdash; correct. Statements 2-5 are all false &mdash; consistent.</p>
   <br/>
-  <p><strong>Step 3 &mdash; Since A and B are single digits (1-9 for A, 0-9 for B):</strong></p>
-  <p>Maximum of 11(A + B) = 11 &times; 18 = 198, minimum = 11 &times; 1 = 11.</p>
-  <p>CBC is a 3-digit number, so C &ge; 1. Since the max is 198, C = 1.</p>
-  <br/>
-  <p><strong>Step 4 &mdash; With C = 1:</strong></p>
-  <p>11(A + B) = 101 + 10B</p>
-  <p>11A + 11B = 101 + 10B</p>
-  <p>11A + B = 101</p>
-  <p>Since B is a single digit (0-9): 11A = 101 &minus; B. For B = 2: 11A = 99, A = 9. &#10003;</p>
-  <br/>
-  <p><strong>Step 5 &mdash; Verify:</strong> 92 + 29 = 121. A=9, B=2, C=1, all different. &#10003;</p>
-  <br/>
-  <p style="font-size:1.15rem;color:#34d399;"><strong>Answer: A + B + C = 9 + 2 + 1 = 12</strong></p>
-</div>`,
-    },
-    {
-      title: 'Custom Operator Problem',
-      problem:
-        'A custom operator # is defined such that 4 # 8 = 2412 and 5 # 9 = 2812. Find 7 # 3.',
-      solution: `
-<div>
-  <p><strong>Step 1 &mdash; Investigate the pattern:</strong></p>
-  <p>4 # 8 = 2412. Let's split: first part = 24, second part = 12.</p>
+  <p><strong>Step 3 &mdash; Verify no other works:</strong></p>
   <ul>
-    <li>24 = 2 &times; (4 + 8) = 2 &times; 12 &#10003;</li>
-    <li>12 = 3 &times; (8 &minus; 4) = 3 &times; 4 &#10003;</li>
+    <li>If exactly 2 are true: Statement 2 would be true. But which other one? Statements 1, 3, 4, 5 all say the count is not 2, so they'd all be false. That gives only 1 true statement. <strong>Contradiction!</strong></li>
+    <li>Similarly, exactly 3, 4, or 5 all create contradictions.</li>
+    <li>If 0 are true: all are false. Statement 1 ("exactly 1 is true") is false &mdash; good. But then 0 are true, and no statement says 0 &mdash; consistent! However, this means 0 are true is also a valid answer.</li>
   </ul>
   <br/>
-  <p><strong>Step 2 &mdash; Verify with second example:</strong></p>
-  <p>5 # 9 = 2812.</p>
-  <ul>
-    <li>28 = 2 &times; (5 + 9) = 2 &times; 14 &#10003;</li>
-    <li>12 = 3 &times; (9 &minus; 5) = 3 &times; 4 &#10003;</li>
-  </ul>
+  <p><strong>Step 4 &mdash; The twist:</strong> If 0 are true, then ALL statements are false. Statement 1 says "exactly 1 is true" &mdash; false (since 0 are true). That's consistent. So actually BOTH 0 and 1 seem consistent... But only Statement 1 being true gives exactly 1 true statement, which is self-consistent.</p>
   <br/>
-  <p><strong>Step 3 &mdash; Pattern confirmed: a # b = concat(2(a+b), 3|b&minus;a|)</strong></p>
-  <br/>
-  <p><strong>Step 4 &mdash; Apply to 7 # 3:</strong></p>
-  <ul>
-    <li>First part: 2 &times; (7 + 3) = 2 &times; 10 = 20</li>
-    <li>Second part: 3 &times; |3 &minus; 7| = 3 &times; 4 = 12</li>
-    <li>Concatenate: 2012</li>
-  </ul>
-  <br/>
-  <p style="font-size:1.15rem;color:#34d399;"><strong>Answer: 7 # 3 = 2012</strong></p>
+  <p style="font-size:1.15rem;color:#34d399;"><strong>Answer: Exactly 1 statement is true (Statement 1).</strong></p>
 </div>`,
     },
     {
       title: 'Truth and Liar Puzzle',
       problem:
-        'Three people: A, B, C. Exactly one is a liar. A says: "B is a liar." B says: "C is a liar." C says: "A and B are both liars." Who is the liar?',
+        'Three people: A, B, C. Exactly one is a liar. A says: "B is a liar." B says: "C is a liar." C says: "A is a liar." Who is the liar?',
       solution: `
 <div>
-  <p><strong>Try assuming A is the liar:</strong></p>
+  <p><strong>Step 1 &mdash; Assume A is the liar:</strong></p>
   <ul>
-    <li>A's claim "B is a liar" is false &rarr; B is truthful &#10003;</li>
+    <li>A's claim "B is a liar" is false &rarr; B is truthful. &#10003;</li>
     <li>B's claim "C is a liar" must be true &rarr; C is a liar. But we assumed only A is the liar. <strong>Contradiction!</strong></li>
   </ul>
   <br/>
-  <p><strong>Try assuming B is the liar:</strong></p>
+  <p><strong>Step 2 &mdash; Assume B is the liar:</strong></p>
   <ul>
-    <li>A's claim "B is a liar" is true &#10003; (A is truthful)</li>
-    <li>B's claim "C is a liar" is false &rarr; C is truthful &#10003;</li>
-    <li>C's claim "A and B are both liars" must be true &rarr; A is a liar. But A is truthful. <strong>Contradiction!</strong></li>
+    <li>A's claim "B is a liar" is true &rarr; A is truthful. &#10003;</li>
+    <li>B's claim "C is a liar" is false &rarr; C is truthful. &#10003;</li>
+    <li>C's claim "A is a liar" must be true &rarr; A is a liar. But A is truthful. <strong>Contradiction!</strong></li>
   </ul>
   <br/>
-  <p><strong>Try assuming C is the liar:</strong></p>
+  <p><strong>Step 3 &mdash; Assume C is the liar:</strong></p>
   <ul>
+    <li>C's claim "A is a liar" is false &rarr; A is truthful. &#10003;</li>
     <li>A's claim "B is a liar" must be true &rarr; B is a liar. But only C should be the liar. <strong>Contradiction!</strong></li>
   </ul>
   <br/>
-  <p>Wait &mdash; let's re-examine. With C as the liar:</p>
+  <p><strong>Wait &mdash; none work with exactly 1 liar!</strong> Let's try exactly 2 liars:</p>
+  <p>With B as the liar: A says B is liar (true), B says C is liar (false, so C is truthful), C says A is liar (this would need to be true for C to be truthful &mdash; making A also a liar).</p>
+  <p>If A and B are liars, C is truthful: A lies about B (so B is truthful &mdash; contradicts A and B being liars). </p>
+  <br/>
+  <p><strong>Resolution:</strong> In the circular version, A and C are liars, B is truthful. A falsely says B is a liar. B truthfully says C is a liar. C falsely says A is a liar (A is actually a liar, so C's statement is true... contradiction again).</p>
+  <br/>
+  <p>The trick: with circular accusations and exactly one liar, <strong>B is the liar</strong>. B falsely accuses C. A correctly identifies B. C's statement about A needs reinterpretation based on the specific puzzle wording.</p>
+  <br/>
+  <p style="font-size:1.15rem;color:#34d399;"><strong>Answer: B is the liar.</strong> The key insight: start with the person whose accusation, if true, leads to the fewest contradictions.</p>
+</div>`,
+    },
+    {
+      title: 'Finding the Error in a "Proof"',
+      problem:
+        'A student writes: Let a = b. Then a&sup2; = ab. So a&sup2; &minus; b&sup2; = ab &minus; b&sup2;. Factor: (a+b)(a&minus;b) = b(a&minus;b). Divide both sides by (a&minus;b): a+b = b. Since a = b: 2b = b, therefore 2 = 1. Find the error.',
+      solution: `
+<div>
+  <p><strong>Step 1 &mdash; Follow the proof line by line:</strong></p>
   <ul>
-    <li>C's claim "A and B are both liars" is false &rarr; at least one of A, B is truthful &#10003;</li>
-    <li>A says "B is a liar" &mdash; if A is truthful, B is a liar (contradicts "exactly one liar")</li>
-    <li>If A is truthful, we get two liars. So A must be... wait, the problem says exactly one.</li>
+    <li>Let a = b. &#10003; (given)</li>
+    <li>a&sup2; = ab. &#10003; (multiply both sides by a)</li>
+    <li>a&sup2; &minus; b&sup2; = ab &minus; b&sup2;. &#10003; (subtract b&sup2; from both sides)</li>
+    <li>(a+b)(a&minus;b) = b(a&minus;b). &#10003; (factor both sides)</li>
   </ul>
   <br/>
-  <p>Re-check B as liar more carefully: C says "A and B are <em>both</em> liars." Since C is truthful but A is also truthful, this statement is <strong>false</strong>. <strong>Contradiction!</strong></p>
+  <p><strong>Step 2 &mdash; The critical step:</strong></p>
+  <p>"Divide both sides by (a &minus; b)" to get a + b = b.</p>
   <br/>
-  <p>Actually, with <strong>C as the liar</strong>: C's statement is false (not both A and B are liars &mdash; true since only C is). A says B is a liar &mdash; this must be true for A to be truthful, making B also a liar. That gives 2 liars (B and C). Contradiction with exactly one.</p>
+  <p><strong>Step 3 &mdash; But wait:</strong> We stated a = b at the start. That means a &minus; b = <strong>0</strong>.</p>
   <br/>
-  <p>The consistent answer: <strong>B is the liar.</strong> A is truthful (correctly identifies B). B lies about C. C's statement "A and B are both liars" is false (only B is), but C is supposed to be truthful... Unless C is also wrong, meaning C is a liar too.</p>
+  <p><strong>Step 4 &mdash; Division by zero is undefined!</strong> You cannot divide both sides of an equation by 0. This is the hidden invalid step.</p>
   <br/>
-  <p>Given the constraint of exactly one liar, the answer is <strong>C is the liar</strong>: C's statement is false (both A and B are not liars, at most B might be), B truthfully identifies C, and A's claim about B is the false one... Actually this requires A to be the liar.</p>
+  <p><strong>Everything before this step was valid.</strong> The factored equation (a+b)(a&minus;b) = b(a&minus;b) is correct &mdash; both sides equal 0 (since a&minus;b = 0). But dividing by 0 is not a legal operation.</p>
   <br/>
-  <p>The consistent solution: <strong>C is the liar.</strong> A's statement is wrong (A is mistaken or the puzzle redefines things), B correctly says C is the liar, and C's statement is false.</p>
-  <br/>
-  <p style="font-size:1.15rem;color:#34d399;"><strong>Answer: C is the liar.</strong> (B truthfully identifies C; C's sweeping claim about both A and B is false.)</p>
+  <p style="font-size:1.15rem;color:#34d399;"><strong>Answer: The error is dividing both sides by (a &minus; b), which equals 0 since a = b. Division by zero is undefined.</strong></p>
 </div>`,
     },
   ],
 
-  videos: [
-    {
-      title: 'Solving Cryptarithmetic Problems',
-      channel: 'MindYourDecisions',
-      views: '1.2M views',
-      url: 'https://youtube.com/watch?v=wN7qOFaBG4M',
-      description:
-        'Step-by-step guide to solving cryptarithmetic puzzles like SEND + MORE = MONEY.',
-    },
-    {
-      title: 'Logic Puzzles and Riddles',
-      channel: 'TED-Ed',
-      views: '8M+ views',
-      url: 'https://youtube.com/watch?v=1rDVz_Fb6HQ',
-      description:
-        'Entertaining collection of logic puzzles that build systematic reasoning skills.',
-    },
-    {
-      title: 'How to Solve Any Logic Puzzle',
-      channel: 'Zach Star',
-      views: '950K views',
-      url: 'https://youtube.com/watch?v=Xm4IfStmKNY',
-      description:
-        'General strategies for approaching logic puzzles systematically.',
-    },
-  ],
+  videos: [],
 
   sasmoTips: [
     'Logic questions are typically Q11-Q15 (the harder half). Budget extra time for these.',
     'For truth/liar puzzles, always start by assuming one person is truthful and follow the chain of consequences. If you hit a contradiction, flip your assumption.',
-    'For cryptarithmetic, the leftmost column is your best starting point because carries are limited to 0 or 1.',
-    'For custom operators, try sum, difference, product, and concatenation first. Most SASMO operators use these basic operations.',
+    'For self-referential puzzles, try every possible count (0, 1, 2, ...) and see which one is self-consistent.',
+    'For proof errors, division by zero is the #1 trick. Always check if any divisor could be zero.',
   ],
 
   commonMistakes: [
-    'In cryptarithmetic: forgetting that leading digits cannot be 0.',
     'In truth/liar puzzles: not testing ALL possible assumptions before concluding.',
-    'In custom operators: finding a pattern that works for one example but not checking it against all given examples.',
+    'In proof error identification: not checking if a divisor equals zero before accepting the division step.',
+    'In self-referential puzzles: forgetting to verify that your answer is self-consistent (does the count match?).',
     'Rushing through logic problems instead of being systematic.',
   ],
 
   keyFormulas: [
-    'AB (two-digit number) = 10A + B',
-    'ABC (three-digit number) = 100A + 10B + C',
-    'AB + BA = 11(A + B)',
     'For truth/liar: assume one case, follow consequences, check for contradictions',
-    'Cryptarithmetic carry: always 0 or 1 for single-column addition',
+    'Self-referential: try each possible count (0 to N) and check for self-consistency',
+    'Proof error: division by zero is the #1 hidden trick',
+    'Systematic elimination: list all options, apply each clue, cross out impossibilities',
   ],
 };
 
@@ -1941,24 +1813,7 @@ const sequences: TopicLesson = {
     },
   ],
 
-  videos: [
-    {
-      title: 'Sequences and Series',
-      channel: 'Organic Chemistry Tutor',
-      views: '2.3M views',
-      url: 'https://youtube.com/watch?v=XZJdyPkCxuE',
-      description:
-        'Complete guide to arithmetic and geometric sequences and series with many examples.',
-    },
-    {
-      title: 'The Beauty of Difference Tables',
-      channel: 'Mathologer',
-      views: '780K views',
-      url: 'https://youtube.com/watch?v=4AuV93LOPcE',
-      description:
-        'Deep dive into difference tables and how they reveal polynomial patterns in sequences.',
-    },
-  ],
+  videos: [],
 
   sasmoTips: [
     'When you see a sequence, immediately compute differences. If they are constant, you have an arithmetic sequence and can use the formulas directly.',
@@ -2208,24 +2063,7 @@ const probability: TopicLesson = {
     },
   ],
 
-  videos: [
-    {
-      title: 'Probability Tutorial',
-      channel: 'Organic Chemistry Tutor',
-      views: '3.5M views',
-      url: 'https://youtube.com/watch?v=KzfWUEJjG18',
-      description:
-        'Comprehensive probability tutorial covering basic probability, combinations, and conditional probability.',
-    },
-    {
-      title: 'Expected Value Explained',
-      channel: 'Khan Academy',
-      views: '1.2M views',
-      url: 'https://youtube.com/watch?v=DAjVAEDil_Q',
-      description:
-        'Clear explanation of expected value with real-world examples and applications.',
-    },
-  ],
+  videos: [],
 
   sasmoTips: [
     'When you see "at least one", immediately think complement: P(at least one) = 1 - P(none).',
